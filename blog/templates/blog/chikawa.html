@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>ちいかわ</title>
+        <link rel="icon" href="{% static 'img/chikawa/usagi_icon3.png' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <!--レスポンシブ対応-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--css
+        font-family:'Nico Moji',sans-serif; -->
+        <style type="text/css">
+            body{
+                padding:0;
+                font-family:'Nico Moji',sans-serif;
+            }
+            
+            @media screen and (min-width:481px){
+                body{
+                    margin:0px 200px 0px 200px;
+                }
+            }
+            @media screen and (max-width:480px){
+                body{
+                    margin:0px;
+                }
+            }
+            div#mainbody{
+                background-image:url("{% static 'img/chikawa/back.jpeg' %}");
+                background-size:100%;
+                margin:0
+            }
+
+            div#header{
+                display:flex;
+                margin:0px;
+                font-family:'Nikukyu',sans-serif;
+                font-size:25px;
+            }
+
+            p#header{
+                margin:10px;
+            }
+
+            div#navber{
+                display:flex;
+                height:auto;
+                background-color:pink;
+                font-family:'Nikukyu',sans-serif;
+                font-size:20px;
+                width:100%;
+            }
+            
+            ul#navber{
+                margin:5px;
+                padding-left:10px;
+            }
+            li#navber{
+                display:inline-block;   
+            }
+            a#navber{
+                text-decoration:none;
+                color:black;
+                display:block;
+            }
+            a#navber:active{
+                color:blue;
+            }
+            a#navber:hover{
+                color:blue;
+            }
+            div#footer{
+                font-family:'Nikukyu',sans-serif;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div id="header">
+            <p id="header">ちいかわ</p>
+            <a style="margin-left:auto;" href="https://www.anime-chiikawa.jp/"><img style="height:50px;"src="{% static 'img/chikawa/usagi_icon3.png' %}"></a>
+        </div>
+
+        <div id="navber">
+            <ul id="navber">
+                <li id="navber"><a id="navber" href="{% url 'temp' %}">おぱんちゅ</li></a>
+                <li id="navber"><a id="navber" href="{% url 'chi' %}">ちいかわ</li></a>
+                <li id="navber"><a id="navber" href="{% url 'list' %}">ぱんつ</li></a>
+            </ul>
+            <a href="https://twitter.com/ngnchiikawa" style="margin-left:auto;"><img style="margin:5px; height:25px;" src="{% static 'img/logo.png' %}"></a>
+            <a href="https://www.youtube.com/watch?v=pbQQAwSQUX4&list=PLxBR7RiJGuKQqmqn0ZMXMcPIjOxWRdA_U"><img style="margin:5px; height:25px;" src="{% static 'img/youtube.png' %}"></a>
+            <a href="https://www.instagram.com/ngnchiikawa/"><img style="margin:5px; height:25px;" src="{% static 'img/insta.png' %}"></a>
+        </div>
+
+
+        <div id="mainbody" style="padding:10px">
+            <div id="intro">
+                <h1>ちいかわの中でも、やっぱり推しは・・・</h1>
+                <h1 style="margin:0; text-align:center">うさぎよね！</h1>
+            </div>
+
+            <div style="text-align:center;">
+                <img src="{% static 'img/chikawa/usagi_icon.jpeg' %}" width="45%">
+                <img src="{% static 'img/chikawa/usagi.png' %}" width="45%">
+                <p style="font-size:30px;">うさぎとは？</p>
+                <p>ちいかわの友達である黄色い体色の兎。誕生日は2019年1月22日(初登場日)。</p>
+                <p>登場当初はちいかわにちょっかいを出す「いじめっ子」のような位置づけであったが、</p>
+                <p>ハチワレ登場以降そういった描写はなくなっていった。(栗まんじゅうに鮭とばで叩かれ注意されることもあった)</p>
+            </div>
+
+            <div id="videotweet" style="text-align:center;">
+                <p style="font-size:30px;">さいしんどうが</p>
+                <iframe width="80%" height="315" src="https://www.youtube.com/embed/pbQQAwSQUX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <a class="twitter-timeline" href="https://twitter.com/ngnchiikawa?ref_src=twsrc%5Etfw">Tweets by ngnchiikawa</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>
+            </div>
+            
+        </div>
+
+        <div id="footer" style="background-color:pink; display:flex">
+            <p style="margin:15px; padding-left:10px; font-size:20px;">ゆうちさくせい</p>
+            <img style="height:50px; margin-left:auto;" src="{% static 'img/chikawa/usagi_icon2.jpeg' %}">
+        </div>
+    </body>
+
+
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+        <style type="text/css">
+            h1{
+                font-family: 'Hachi Maru Pop', cursive;
+                color:gray;
+            }
+        </style>
+    </head>
+    <h1>Testテストてすと</h1>
+    {% for object in object_list %}
+        {{object.posted_date}}
+        {{object.author}}
+        {{object.text}}
+    {% endfor %}
+</html>

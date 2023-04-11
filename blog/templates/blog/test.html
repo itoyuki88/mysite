@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>おぱんちゅ</title>
+        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+        <link rel="icon" href="{% static 'img/usagi.png' %}">
+        <!--レスポンシブ対応-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <style type="text/css">
+
+            body{
+                font-family:'Nico Moji',sans-serif;
+            }
+        
+            /*PC用とタブレット用*/
+            @media screen and (min-width:481px){
+                body{
+                    margin:0px 200px 0px 200px;
+                }
+            }
+            /*スマホ用*/
+            @media screen and (max-width:480px){
+                body{
+                    margin:0;
+                }
+            }
+    
+            a{
+                text-decoration:none;
+            }
+            textarea#id_content.textarea{
+                width:100%;
+            }
+            button#form{
+                background-color:pink;
+                padding:10px;
+                border-radius:10px;
+                font-family:'Nico Moji',sans-serif;
+                font-size:20px;
+            }
+
+            div#header{
+                height:120px;
+                width:auto;
+                background-color:white;
+                display:flex;
+                background-color:white;
+                background-image:url("{% static 'img/back.jpg' %}");
+                background-repeat:no-repeat;
+                background-position:right center;
+                font-size:25px;
+                font-family:'Nikukyu',sans-serif;
+
+            }
+            
+            @media screen and (min-width:481px){
+                div#header{
+                    background-size:50%;  
+                }
+            }
+            @media screen and (max-width:480px){
+                div#header{
+                    background-size:100%;
+                }
+            }
+            
+
+            p#header{
+                margin:10px;
+            }
+            img#header{
+                width:70%;
+                margin-left:auto;
+            }
+            
+            div#navber{
+
+                display:flex;
+                height:auto;
+                background-color:yellow;
+                font-family:'Nikukyu',sans-serif;
+                font-size:20px;
+                width:100%;
+            }
+            ul#navber{
+                margin:5px;
+                padding-left:10px;
+            }
+            li#navber{
+                display:inline-block;   
+            }
+            a#navber{
+                text-decoration:none;
+                color:black;
+                display:block;
+            }
+            a#navber:active{
+                color:blue;
+            }
+            a#navber:hover{
+                color:blue;
+            }
+
+            div#mainbody{
+                display:flex;
+                height:auto;
+                background-image:url("{% static 'img/body_back.png' %}");
+                background-repeat:no-repeat;
+                background-size:100% 100%;
+                padding:10px;
+                flex-flow:column;
+            }
+        
+     
+
+            div#footer{
+                display:flex;
+                background-color:yellow;
+                height:50px;
+                font-family:'Nikukyu',sans-serif;
+            }
+            img#footer{
+                margin-left:auto;
+            }
+            p#footer{
+                padding-left:10px;
+            }
+            
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">           
+            <div id="header">
+                <p id="header">おぱんちゅ</p>
+            </div>
+
+            <div id="navber">
+                <ul id="navber">
+                    <li id="navber"><a id="navber" href={% url "temp" %}>おぱんちゅ</li></a>
+                    <li id="navber"><a id="navber" href={% url "chi" %}>ちいかわ</li></a>
+                    <li id="navber"><a id="navber" href={% url "list" %}>ぱんつ</li></a>
+                </ul>
+                <a href="https://twitter.com/opanchu_usagi_" style="margin-left:auto;"><img style="margin:5px; height:25px;" src="{% static 'img/logo.png' %}"></a>
+                <a href="https://www.youtube.com/@kawisouni"><img style="margin:5px; height:25px;" src="{% static 'img/youtube.png' %}"></a>
+                <a href="https://www.instagram.com/opanchu.usagi/"><img style="margin:5px; height:25px;" src="{% static 'img/insta.png' %}"></a>
+            </div>
+
+            <div id="mainbody">
+                <h1>おぱんちゅうさぎとは？</h1>
+                <p>「おぱんちゅうさぎ」は、イラストレーターとして活動している
+                    <a href="https://twitter.com/onkun_suko?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">「可哀想に！」</a>さんが描くパンツを履いたうさぎのキャラクターで、
+                    頑張り屋さんだけれどいつも報われない、
+                    そんな切ない姿とシュールさが可愛くて魅力的なイラストです。
+                </p>
+                <div style="text-align:center">
+                    <img style="width:20%" src="{% static 'img/usagi1.png' %}">
+                    <img style="width:25%" src="{% static 'img/usagi2.png' %}">
+                    <img style="width:20%" src="{% static 'img/usagi3.png' %}">
+                    <img style="width:25%" src="{% static 'img/usagi4.png' %}">
+                </div>
+                <br>
+                <iframe width="auto" height="400" src="https://www.youtube.com/embed/mHqxt6zBNqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+                <a class="twitter-timeline" href="https://twitter.com/opanchu_usagi_?ref_src=twsrc%5Etfw">Tweets by opanchu_usagi_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <div id="footer">
+                <p id="footer">ゆうちさくせい</p>
+                <img id="footer" src="{% static 'img\icon.png' %}">
+            </div>
+
+        </div>
+
+    </body>
+
+
+</html>
