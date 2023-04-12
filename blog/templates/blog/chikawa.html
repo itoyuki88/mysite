@@ -72,10 +72,20 @@
             a#navber:hover{
                 color:blue;
             }
+
             div#footer{
+                display:flex;
+                background-color:pink;
+                height:50px;
                 font-family:'Nikukyu',sans-serif;
             }
-
+            img#footer{
+                margin-left:auto;
+            }
+            p#footer{
+                padding-left:10px;
+            }
+            
         </style>
 
     </head>
@@ -123,9 +133,9 @@
             
         </div>
 
-        <div id="footer" style="background-color:pink; display:flex">
-            <p style="margin:15px; padding-left:10px; font-size:20px;">ゆうちさくせい</p>
-            <img style="height:50px; margin-left:auto;" src="{% static 'img/chikawa/usagi_icon2.jpeg' %}">
+        <div id="footer">
+            <p id="footer">ゆうちさくせい</p>
+            <img id="footer" src="{% static 'img/chikawa/usagi_icon2.jpeg' %}">
         </div>
     </body>
 
